@@ -1,22 +1,11 @@
 // app/download/page.tsx
 import { redirect } from 'next/navigation';
 
+// This is a React Server Component in the App Router
 export default function DownloadPage() {
-  // This page doesn't need to render anything since it will redirect
-  return (
-    <div>
-      <h1>Initiating your download...</h1>
-      <p>If your download doesn't start automatically, <a href="/downloads/Claimed-Crowned-Consumed.pdf" download>click here</a>.</p>
-    </div>
-  );
-}
-
-// This runs on the server before the page loads
-export async function getServerSideProps() {
-  return {
-    redirect: {
-      destination: '/downloads/Claimed-Crowned-Consumed.pdf',
-      permanent: false,
-    },
-  };
+  // In App Router, you can call redirect directly in Server Components
+  redirect('/downloads/Claimed-Crowned-Consumed.pdf');
+  
+  // This part won't actually render, but is needed for TypeScript
+  return null;
 }
