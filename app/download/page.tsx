@@ -1,11 +1,9 @@
-// app/download/page.tsx
 import { redirect } from 'next/navigation';
 
-// This is a React Server Component in the App Router
 export default function DownloadPage() {
-  // In App Router, you can call redirect directly in Server Components
-  redirect('/downloads/Claimed-Crowned-Consumed.pdf');
+  // Redirect to the API route that forces download
+  redirect('/api/get-book');
   
-  // This part won't actually render, but is needed for TypeScript
+  // This won't render
   return null;
 }
