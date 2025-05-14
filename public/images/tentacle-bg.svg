@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800px" height="600px" viewBox="0 0 800 600" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <title>Tentacle Background</title>
+    <g id="Tentacle-Background" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M100,600 C150,550 120,500 180,450 C240,400 300,450 350,400 C400,350 380,300 420,250 C460,200 520,220 560,180 C600,140 580,80 620,40 C660,0 700,20 750,0" id="Tentacle-1" stroke="#D4AF37" stroke-width="3" opacity="0.2"></path>
+        <path d="M50,600 C100,550 80,500 130,450 C180,400 240,430 280,380 C320,330 300,280 340,230 C380,180 440,200 480,160 C520,120 500,60 540,20 C580,-20 620,0 670,-20" id="Tentacle-2" stroke="#D4AF37" stroke-width="2" opacity="0.15"></path>
+        <path d="M0,600 C50,540 30,480 80,420 C130,360 190,390 230,330 C270,270 250,210 290,150 C330,90 390,110 430,70 C470,30 450,-30 490,-70 C530,-110 570,-90 620,-110" id="Tentacle-3" stroke="#D4AF37" stroke-width="4" opacity="0.1"></path>
+        <path d="M150,600 C200,560 180,520 230,480 C280,440 340,470 380,430 C420,390 400,350 440,310 C480,270 540,290 580,250 C620,210 600,150 640,110 C680,70 720,90 770,70" id="Tentacle-4" stroke="#D4AF37" stroke-width="3" opacity="0.1"></path>
+        <!-- Add some suction cups -->
+        <circle id="Cup-1" fill="#D4AF37" opacity="0.2" cx="180" cy="450" r="10"></circle>
+        <circle id="Cup-2" fill="#D4AF37" opacity="0.2" cx="350" cy="400" r="8"></circle>
+        <circle id="Cup-3" fill="#D4AF37" opacity="0.2" cx="420" cy="250" r="12"></circle>
+        <circle id="Cup-4" fill="#D4AF37" opacity="0.2" cx="560" cy="180" r="9"></circle>
+        <circle id="Cup-5" fill="#D4AF37" opacity="0.2" cx="620" cy="40" r="10"></circle>
+        <circle id="Cup-6" fill="#D4AF37" opacity="0.2" cx="230" cy="480" r="8"></circle>
+        <circle id="Cup-7" fill="#D4AF37" opacity="0.2" cx="380" cy="430" r="12"></circle>
+        <circle id="Cup-8" fill="#D4AF37" opacity="0.2" cx="440" cy="310" r="9"></circle>
+        <circle id="Cup-9" fill="#D4AF37" opacity="0.2" cx="580" cy="250" r="10"></circle>
+        <circle id="Cup-10" fill="#D4AF37" opacity="0.2" cx="640" cy="110" r="8"></circle>
+    </g>
+</svg>
