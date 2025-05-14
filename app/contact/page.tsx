@@ -44,7 +44,7 @@ export default function ContactPage() {
         subject: '',
         message: ''
       });
-    } catch (err) {
+    } catch (_err) { // Fixed unused variable with underscore prefix
       setError('There was an error sending your message. Please try again.');
     } finally {
       setIsSubmitting(false);
@@ -61,7 +61,7 @@ export default function ContactPage() {
             <h2 className={styles.sectionTitle}>Get in Touch</h2>
             <p className={styles.contactText}>
               Questions? Comments? Passionate declarations about which monster was your favorite? 
-              I'd love to hear from you.
+              I would love to hear from you.
             </p>
             
             <div className={styles.contactMethod}>
@@ -159,7 +159,7 @@ export default function ContactPage() {
               <div className={styles.successMessage}>
                 <h2 className={styles.successTitle}>Message Sent!</h2>
                 <p className={styles.successText}>
-                  Thank you for reaching out. I'll get back to you as soon as possible.
+                  Thank you for reaching out. I will get back to you as soon as possible.
                 </p>
                 <button 
                   onClick={() => setIsSubmitted(false)} 
