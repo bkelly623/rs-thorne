@@ -1,7 +1,7 @@
 // app/free-book/page.tsx
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, ChangeEvent, FormEvent } from 'react';
 import Link from 'next/link';
 import styles from './free-book.module.css';
 
@@ -11,7 +11,7 @@ export default function FreeBookPage() {
     email: '',
     firstName: '',
     readingFrequency: '',
-    subgenrePreferences: []
+    subgenrePreferences: [] as string[]
   });
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
@@ -34,7 +34,7 @@ export default function FreeBookPage() {
   ];
 
   // Handle form input changes
-  const handleInputChange = (e) => {
+  const handleInputChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData({
       ...formData,
@@ -43,7 +43,7 @@ export default function FreeBookPage() {
   };
 
   // Handle checkbox changes for subgenre preferences
-  const handleCheckboxChange = (e) => {
+  const handleCheckboxChange = (e: ChangeEvent<HTMLInputElement>) => {
     const { value, checked } = e.target;
     if (checked) {
       setFormData({
@@ -59,7 +59,7 @@ export default function FreeBookPage() {
   };
 
   // Submit form handler
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
     setError('');
@@ -96,7 +96,7 @@ export default function FreeBookPage() {
       window.scrollTo(0, 0);
       
     } catch (err) {
-      setError(err.message || 'Failed to subscribe. Please try again.');
+      setError(err instanceof Error ? err.message : 'Failed to subscribe. Please try again.');
     } finally {
       setLoading(false);
     }
@@ -107,7 +107,7 @@ export default function FreeBookPage() {
       {success ? (
         <div className={styles.successContainer}>
           <div className={styles.successContent}>
-            <h1 className={styles.successTitle}>YOU'VE BEEN CLAIMED</h1>
+            <h1 className={styles.successTitle}>YOU&apos;VE BEEN CLAIMED</h1>
             <div className={styles.successImageContainer}>
               <img 
                 src="/images/Claimed, Crowned, Consumed.jpg" 
@@ -120,8 +120,8 @@ export default function FreeBookPage() {
               The dark depths await you. Check your email for your free book download.
             </p>
             <p className={styles.successDetails}>
-              If you don't see it within a few minutes, please check your spam folder. 
-              You're now part of the dark realm where passion knows no bounds.
+              If you don&apos;t see it within a few minutes, please check your spam folder. 
+              You&apos;re now part of the dark realm where passion knows no bounds.
             </p>
             <Link href="/" className={styles.returnButton}>
               Return to Homepage
@@ -133,7 +133,7 @@ export default function FreeBookPage() {
           <section className={styles.heroSection}>
             <div className={styles.heroContent}>
               <h1 className={styles.pageTitle}>CLAIM YOUR FREE BOOK</h1>
-              <p className={styles.pageSubtitle}>Enter a world where monsters don't just want—they <em>worship</em></p>
+              <p className={styles.pageSubtitle}>Enter a world where monsters don&apos;t just want—they <em>worship</em></p>
             </div>
           </section>
 
@@ -159,19 +159,19 @@ export default function FreeBookPage() {
                     </p>
                     <p className={styles.excerptText}>
                       Maris was raised by the tide cult to be a vessel—obedient, untouched, marked for sacrifice. 
-                      But when she's dragged beneath the waves, the god waiting in the dark doesn't devour her.
+                      But when she&apos;s dragged beneath the waves, the god waiting in the dark doesn&apos;t devour her.
                     </p>
                     <p className={styles.excerptText}>
                       He fills her. He changes her. He makes her come apart on a breeding altar—and then rebuilds her, 
                       glowing and wrecked.
                     </p>
                     <p className={styles.tagline}>
-                      "You're not here for a love story. You're here to be <em>rewritten.</em>"
+                      &quot;You&apos;re not here for a love story. You&apos;re here to be <em>rewritten.</em>&quot;
                     </p>
                   </div>
                   
                   <div className={styles.benefitsList}>
-                    <h3 className={styles.benefitsTitle}>When You Join R.S. Thorne's Dark Realm:</h3>
+                    <h3 className={styles.benefitsTitle}>When You Join R.S. Thorne&apos;s Dark Realm:</h3>
                     <ul>
                       <li>Get this complete, high-heat monster romance delivered instantly</li>
                       <li>Receive exclusive bonus scenes too explicit for publication</li>
@@ -183,24 +183,24 @@ export default function FreeBookPage() {
                   <div className={styles.testimonials}>
                     <div className={styles.testimonial}>
                       <p className={styles.testimonialText}>
-                        "I've never read anything like this before. The rituals, the worship, the <em>claiming</em>... 
-                        I couldn't put it down. R.S. Thorne writes monsters that will ruin you for human men."
+                        &quot;I&apos;ve never read anything like this before. The rituals, the worship, the <em>claiming</em>... 
+                        I couldn&apos;t put it down. R.S. Thorne writes monsters that will ruin you for human men.&quot;
                       </p>
                       <p className={styles.testimonialAuthor}>— Melissa K.</p>
                     </div>
                     
                     <div className={styles.testimonial}>
                       <p className={styles.testimonialText}>
-                        "The perfect balance of dark, erotic, and surprisingly emotional. I've read it three times 
-                        and find new details with each read. Absolutely addictive."
+                        &quot;The perfect balance of dark, erotic, and surprisingly emotional. I&apos;ve read it three times 
+                        and find new details with each read. Absolutely addictive.&quot;
                       </p>
                       <p className={styles.testimonialAuthor}>— Jennifer T.</p>
                     </div>
                     
                     <div className={styles.testimonial}>
                       <p className={styles.testimonialText}>
-                        "If you think you've read monster romance before, think again. This is a whole new level 
-                        of intensity. Consider me claimed and consumed."
+                        &quot;If you think you&apos;ve read monster romance before, think again. This is a whole new level 
+                        of intensity. Consider me claimed and consumed.&quot;
                       </p>
                       <p className={styles.testimonialAuthor}>— Rachel M.</p>
                     </div>
@@ -289,7 +289,7 @@ export default function FreeBookPage() {
                     </button>
                     
                     <p className={styles.privacyPolicy}>
-                      By subscribing, you'll receive your free book and join R.S. Thorne's newsletter. 
+                      By subscribing, you&apos;ll receive your free book and join R.S. Thorne&apos;s newsletter. 
                       Your information will never be shared with third parties, and you can unsubscribe at any time. 
                       We respect your privacy and will only send content related to book releases and exclusive offers.
                     </p>
