@@ -1,18 +1,18 @@
+// app/page.tsx
 import HeroSection from './components/HeroSection';
+import FeaturedBook from './components/FeaturedBook';
+import BookGrid from './components/BookGrid';
+import SocialProof from './components/SocialProof';
+import SimpleBookSignup from './components/SimpleBookSignup';
 
 export default function Home() {
   return (
     <main>
       <HeroSection />
-      
-      <h2 className="section-title">Featured Series</h2>
-      <div className="book-preview">
-        <div className="series-info">
-          <h3>Monstrously Claimed</h3>
-          <p>A dark fantasy romance series where forbidden desires meet supernatural power. When monsters choose their mates, surrender is inevitable.</p>
-          <a href="#" className="btn">Explore Series</a>
-        </div>
-      </div>
+      <FeaturedBook />
+      <BookGrid />
+      <SocialProof />
+      <SimpleBookSignup />
     </main>
   );
 }

@@ -6,7 +6,7 @@ export default function AboutPage() {
   return (
     <main className={styles.aboutPage}>
       <div className={styles.container}>
-        <h1 className={styles.pageTitle}>About R.S. Thorne</h1>
+        <h1 className={`${styles.pageTitle} shimmer-gold`}>About R.S. Thorne</h1>
         
         <div className={styles.bioContent}>
           <div className={styles.authorImageContainer}>
@@ -19,12 +19,12 @@ export default function AboutPage() {
           
           <div className={styles.bioText}>
             <p className={styles.tagline}>
-              <span className={styles.emoji}>🔥</span> <strong>Dark. Obsessive. Unapologetically filthy.</strong>
+              <span className={styles.emoji}>🔥</span> <strong className="shimmer-gold">Dark. Obsessive. Unapologetically filthy.</strong>
             </p>
             
             <p>
               R.S. Thorne writes bestselling monster romance for readers who want more than just a love story—they 
-              want to be <em>claimed</em>. Best known for the <em>Monstrously Claimed</em> series, Thorne's books blend lush, 
+              want to be <em className="shimmer-gold">claimed</em>. Best known for the <em className="shimmer-gold">Monstrously Claimed</em> series, Thorne's books blend lush, 
               immersive fantasy with raw erotic heat, summoning gods, beasts, and creatures from the dark to worship 
               heroines in the most sacred—and scandalous—ways imaginable.
             </p>
@@ -35,11 +35,11 @@ export default function AboutPage() {
             </p>
             
             <p>
-              Thorne doesn't write polite monsters. She writes monsters who <strong>obsess, possess, and bless</strong>—in that order.
+              Thorne doesn't write polite monsters. She writes monsters who <strong className="shimmer-gold">obsess, possess, and bless</strong>—in that order.
             </p>
             
             <div className={styles.bioSection}>
-              <h2 className={styles.sectionTitle}>
+              <h2 className={`${styles.sectionTitle} shimmer-gold`}>
                 <span className={styles.emoji}>💀</span> Why Monster Romance?
               </h2>
               <p>
@@ -51,7 +51,7 @@ export default function AboutPage() {
             </div>
             
             <div className={styles.bioSection}>
-              <h2 className={styles.sectionTitle}>
+              <h2 className={`${styles.sectionTitle} shimmer-gold`}>
                 <span className={styles.emoji}>✍️</span> What to Expect
               </h2>
               <ul className={styles.expectList}>
@@ -64,7 +64,7 @@ export default function AboutPage() {
             </div>
             
             <div className={styles.bioSection}>
-              <h2 className={styles.sectionTitle}>
+              <h2 className={`${styles.sectionTitle} shimmer-gold`}>
                 <span className={styles.emoji}>⚡</span> Inspirations
               </h2>
               <p>
@@ -75,7 +75,7 @@ export default function AboutPage() {
             </div>
             
             <div className={styles.bioSection}>
-              <h2 className={styles.sectionTitle}>
+              <h2 className={`${styles.sectionTitle} shimmer-gold`}>
                 <span className={styles.emoji}>💡</span> Fun Facts
               </h2>
               <ul className={styles.factsList}>
@@ -92,7 +92,7 @@ export default function AboutPage() {
             </div>
             
             <div className={styles.ctaSection}>
-              <h2 className={styles.ctaTitle}>
+              <h2 className={`${styles.ctaTitle} shimmer-gold`}>
                 <span className={styles.emoji}>📬</span> Ready to be Claimed?
               </h2>
               <p>
@@ -109,26 +109,26 @@ export default function AboutPage() {
         
         <div className={styles.faqContainer}>
           <details className={styles.faqDetails}>
-            <summary className={styles.faqSummary}>
-              <span className={styles.emoji}>📚</span> Frequently Asked Questions
+          <summary className={styles.faqSummary}>
+              <span className={styles.emoji}>📚</span> <span className="shimmer-gold">Frequently Asked Questions</span>
             </summary>
             <div className={styles.faqContent}>
               <div className={styles.faqItem}>
-                <h3 className={styles.faqQuestion}>Are your books interconnected?</h3>
+                <h3 className={`${styles.faqQuestion} shimmer-gold`}>Are your books interconnected?</h3>
                 <p className={styles.faqAnswer}>
                   Most are standalone within a shared universe. But if you read them all… you'll notice the monsters talk.
                 </p>
               </div>
               
               <div className={styles.faqItem}>
-                <h3 className={styles.faqQuestion}>Will you write morally gray heroes?</h3>
+                <h3 className={`${styles.faqQuestion} shimmer-gold`}>Will you write morally gray heroes?</h3>
                 <p className={styles.faqAnswer}>
                   No. Mine are black-hearted beasts who worship one woman and destroy everything else.
                 </p>
               </div>
               
               <div className={styles.faqItem}>
-                <h3 className={styles.faqQuestion}>How spicy are your books?</h3>
+                <h3 className={`${styles.faqQuestion} shimmer-gold`}>How spicy are your books?</h3>
                 <p className={styles.faqAnswer}>
                   Ritual. Bond. Mate. Climax. Repeat.
                 </p>

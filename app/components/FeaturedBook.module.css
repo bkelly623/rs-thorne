@@ -1,0 +1,143 @@
+/* components/FeaturedBook.module.css */
+.featuredContainer {
+    padding: 5rem 2rem;
+    background-color: #0d0d0d;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .featuredWrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .sectionTitle {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #d4af37;
+    font-weight: 600;
+    position: relative;
+  }
+  
+  .sectionTitle::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: #d4af37;
+  }
+  
+  .featuredContent {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+  }
+  
+  .coverWrapper {
+    flex-shrink: 0;
+  }
+  
+  .coverImage {
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+  }
+  
+  .coverImage:hover {
+    transform: scale(1.05);
+  }
+  
+  .bookInfo {
+    flex: 1;
+  }
+  
+  .bookTitle {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+    color: white;
+  }
+  
+  .releaseStatus {
+    font-size: 1.1rem;
+    color: #d4af37;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+  }
+  
+  .bookDescription {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    color: #e0e0e0;
+  }
+  
+  .bookDescription p {
+    margin-bottom: 1rem;
+  }
+  
+  .bookDescription p:first-child {
+    font-style: italic;
+    color: #d4af37;
+    font-weight: 500;
+  }
+  
+  .ctaWrapper {
+    margin-top: 1.5rem;
+  }
+  
+  .comingSoon {
+    display: inline-block;
+    background-color: rgba(212, 175, 55, 0.15);
+    color: #d4af37;
+    font-weight: 600;
+    padding: 0.8rem 2rem;
+    font-size: 1.1rem;
+    border-radius: 4px;
+    border: 1px solid #d4af37;
+  }
+  
+  .seriesTag {
+    margin-top: 1rem;
+    font-size: 0.95rem;
+    color: #aaa;
+  }
+  
+  .seriesTag span {
+    font-style: italic;
+    color: #d4af37;
+  }
+  
+  /* Responsive styling */
+  @media (max-width: 900px) {
+    .featuredContent {
+      flex-direction: column;
+      text-align: center;
+    }
+    
+    .bookInfo {
+      max-width: 600px;
+    }
+    
+    .sectionTitle {
+      font-size: 2rem;
+    }
+    
+    .bookTitle {
+      font-size: 1.8rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .featuredContainer {
+      padding: 3rem 1.25rem;
+    }
+    
+    .coverImage {
+      max-width: 80%;
+      height: auto;
+    }
+  }

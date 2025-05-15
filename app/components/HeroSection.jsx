@@ -1,7 +1,7 @@
 // app/components/HeroSection.jsx
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styles from './HeroSection.module.css';
 
 const HeroSection = () => {
@@ -13,6 +13,16 @@ const HeroSection = () => {
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState('');
+
+  // Activate animations when the component mounts
+  useEffect(() => {
+    setTimeout(() => {
+      const fadeElements = document.querySelectorAll('.fade-in-up, .fade-in-left, .fade-in-right');
+      fadeElements.forEach(element => {
+        element.classList.add('visible');
+      });
+    }, 300);
+  }, []);
 
   const subgenreOptions = [
     { id: 'tentacle', label: 'Tentacle/Sea God' },
@@ -84,31 +94,32 @@ const HeroSection = () => {
   };
 
   return (
-    <section className={styles.heroSection}>
-      <div className={styles.heroContent}>
+    <section className={`${styles.heroSection} parallax-container`}>
+      <div className="parallax-bg" data-speed="0.2" style={{backgroundImage: "url('/images/tentacle-bg.svg')"}}></div>
+      <div className={`${styles.heroContent} parallax-content`}>
         <div className={styles.heroText}>
-          <h1 className={styles.authorName}>R.S. Thorne</h1>
-          <h2 className={styles.authorTagline}>Dark Erotic Monster Romance</h2>
-          <p className={styles.heroTagline}>Enter a world where passion knows no bounds</p>
+          <h1 className={`${styles.authorName} shimmer-gold fade-in-up`}>R.S. Thorne</h1>
+          <h2 className={`${styles.authorTagline} fade-in-up delay-100`}>Dark Erotic Monster Romance</h2>
+          <p className={`${styles.heroTagline} fade-in-up delay-200`}>Enter a world where passion knows no bounds</p>
           
-          <div className={styles.bookDisplay}>
+          <div className={`${styles.bookDisplay} fade-in-left delay-300`}>
             <img 
               src="/images/Claimed, Crowned, Consumed.jpg" 
               alt="Claimed, Crowned, Consumed book cover" 
-              className={styles.bookCover}
+              className={`${styles.bookCover} cover-transform`}
             />
             <div className={styles.bookInfo}>
-              <h3 className={styles.seriesTitle}>Monstrously Claimed</h3>
+              <h3 className={`${styles.seriesTitle} shimmer-gold`}>Monstrously Claimed</h3>
               <h2 className={styles.bookTitle}>CLAIMED, CROWNED, CONSUMED</h2>
               <p className={styles.bookTagline}>"You're not here for a love story. You're here to be <em>rewritten</em>."</p>
             </div>
           </div>
         </div>
         
-        <div className={styles.formContainer}>
+        <div className={`${styles.formContainer} fade-in-right delay-300`}>
           {!success ? (
             <>
-              <h2 className={styles.formTitle}>CLAIM YOUR FREE BOOK</h2>
+              <h2 className={`${styles.formTitle} shimmer-gold`}>CLAIM YOUR FREE BOOK</h2>
               <p className={styles.formSubtitle}>Join the dark depths where passion knows no bounds</p>
               
               <form onSubmit={handleSubmit} className={styles.signupForm}>
@@ -156,7 +167,7 @@ const HeroSection = () => {
                 
                 <button 
                   type="submit" 
-                  className={styles.submitButton}
+                  className={`${styles.submitButton} pulse-effect`}
                   disabled={loading}
                 >
                   {loading ? 'SUBMITTING...' : 'DEVOUR NOW'}
@@ -171,7 +182,7 @@ const HeroSection = () => {
             </>
           ) : (
             <div className={styles.successMessage}>
-              <h2 className={styles.successTitle}>YOU'VE BEEN CLAIMED</h2>
+              <h2 className={`${styles.successTitle} shimmer-gold`}>YOU'VE BEEN CLAIMED</h2>
               <p className={styles.successText}>
                 Check your email for your free book. If you don't see it within a few minutes, 
                 please check your spam folder.

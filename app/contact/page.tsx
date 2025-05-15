@@ -54,23 +54,23 @@ export default function ContactPage() {
   return (
     <main className={styles.contactPage}>
       <div className={styles.container}>
-        <h1 className={styles.pageTitle}>Contact</h1>
+        <h1 className={`${styles.pageTitle} shimmer-gold`}>Contact</h1>
         
         <div className={styles.contactContent}>
           <div className={styles.contactInfo}>
-            <h2 className={styles.sectionTitle}>Get in Touch</h2>
+            <h2 className={`${styles.sectionTitle} shimmer-gold`}>Get in Touch</h2>
             <p className={styles.contactText}>
               Questions? Comments? Passionate declarations about which monster was your favorite? 
               I would love to hear from you.
             </p>
             
             <div className={styles.contactMethod}>
-              <h3 className={styles.contactMethodTitle}>Email</h3>
+              <h3 className={`${styles.contactMethodTitle} shimmer-gold`}>Email</h3>
               <p className={styles.contactMethodValue}>author@rsthorne.com</p>
             </div>
             
             <div className={styles.contactMethod}>
-              <h3 className={styles.contactMethodTitle}>Social Media</h3>
+              <h3 className={`${styles.contactMethodTitle} shimmer-gold`}>Social Media</h3>
               <div className={styles.socialLinks}>
                 <a href="#" className={styles.socialLink}>TikTok</a>
                 <a href="#" className={styles.socialLink}>Instagram</a>
@@ -79,7 +79,7 @@ export default function ContactPage() {
             </div>
             
             <div className={styles.contactNote}>
-              <h3 className={styles.contactNoteTitle}>For Publishers & Media</h3>
+              <h3 className={`${styles.contactNoteTitle} shimmer-gold`}>For Publishers & Media</h3>
               <p className={styles.contactNoteText}>
                 For rights inquiries, interview requests, or other business matters,
                 please specify in your message.
@@ -90,7 +90,7 @@ export default function ContactPage() {
           <div className={styles.contactForm}>
             {!isSubmitted ? (
               <>
-                <h2 className={styles.formTitle}>Send a Message</h2>
+                <h2 className={`${styles.formTitle} shimmer-gold`}>Send a Message</h2>
                 <form onSubmit={handleSubmit}>
                   <div className={styles.formGroup}>
                     <label htmlFor="name" className={styles.formLabel}>Name</label>
@@ -157,7 +157,7 @@ export default function ContactPage() {
               </>
             ) : (
               <div className={styles.successMessage}>
-                <h2 className={styles.successTitle}>Message Sent!</h2>
+                <h2 className={`${styles.successTitle} shimmer-gold`}>Message Sent!</h2>
                 <p className={styles.successText}>
                   Thank you for reaching out. I will get back to you as soon as possible.
                 </p>

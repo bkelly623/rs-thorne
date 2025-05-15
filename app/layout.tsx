@@ -1,6 +1,9 @@
+// app/layout.tsx
 import type { Metadata } from "next";
 import "./globals.css";
+import "./styles/animations.css";
 import Navigation from './components/Navigation';
+import AnimationInitializer from './scripts/animations';
 
 export const metadata: Metadata = {
   title: "R.S. Thorne | Dark Erotic Monster Romance",
@@ -24,6 +27,7 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" />
       </head>
       <body>
+        <AnimationInitializer />
         <Navigation />
         <div className="page-content">
           {children}
