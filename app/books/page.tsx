@@ -26,34 +26,42 @@ export default function BooksPage() {
       imagePath: '/images/Claimed By The Kraken.jpg',
       description: 'When Lira is cast into the Kraken\'s Cove as a sacrifice, an ancient sea god with tentacles that writhe with forbidden power claims her as his mate. Featuring divine obsession, explicit tentacle scenes, breeding altars, and a heroine who rises as a queen.',
       status: 'Available Now',
-      amazonLink: '#'
+      amazonLink: 'https://www.amazon.com/dp/B0F8R9KC6X?&linkCode=ll1&tag=bkelly623-20&linkId=1c7e970e45db2259e927286048e76cc3&language=en_US&ref_=as_li_ss_tl'
     },
     {
       id: 2,
+      title: 'Bloomed By The Thorn King',
+      imagePath: '/images/Bloomed By The Thorn King.jpg',
+      description: 'Cast out as a failed sacrifice, Sera is claimed by the ancient Thorn King who roots himself deep within her. With every thrust the forest blooms, with every moan the vines climb higher. Featuring primal gods, sacred breeding, possessive vines, and a rejected offering who becomes the forest\'s radiant queen.',
+      status: 'Available Now',
+      amazonLink: 'https://www.amazon.com/dp/B0F8RCPFVC?&linkCode=ll1&tag=bkelly623-20&linkId=97ecfdcb42b59f3e834946a5798ccdd8&language=en_US&ref_=as_li_ss_tl'
+    },
+    {
+      id: 3,
       title: 'Pierced By The Savage Thorns',
       imagePath: '/images/Pierced By The Savage Thorns.jpg',
       description: 'When Wren steps off the path in Wyldgrove Forest, she\'s stalked by something ancient that hungers for her heat. Expect knotting, obsessive possession, sentient vines, primal heat, and a brutal forest god who worships his mate with reverence and ruin.',
       status: 'Available Now',
-      amazonLink: '#'
+      amazonLink: 'https://www.amazon.com/dp/B0F8VVWNXM?&linkCode=ll1&tag=bkelly623-20&linkId=c57d5fa99b7f416a2cda128e9f7ba691&language=en_US&ref_=as_li_ss_tl'
     },
     {
-      id: 3,
+      id: 4,
       title: 'Ravaged By The Hollow Beast',
       imagePath: '/images/Ravaged By The Hollow Beast.jpg',
       description: 'Dragged into a monstrous realm of blood trials and brutal devotion, Leah is bound to a primal, possessive creature who burns for one thing alone: her. Packed with obsessive love, savage claiming, and scorching heat. A monster made to ruin you—beautifully.',
       status: 'Available Now',
-      amazonLink: '#'
+      amazonLink: 'https://www.amazon.com/dp/B0F8WR6WWM?&linkCode=ll1&tag=bkelly623-20&linkId=ea3cc540673defa97d964644c1b081ef&language=en_US&ref_=as_li_ss_tl'
     },
     {
-      id: 4,
+      id: 5,
       title: 'Claiming The Monster God',
       imagePath: '/images/claiming-the-monster-god.jpg',
       description: 'When Nherissa rises from the altar not as a victim but as a goddess of lust and vengeance, the heavens tremble. A reverse harem of fallen gods, explicit scenes of worship, and a pantheon turned to ash beneath her moans.',
       status: 'Available Now',
-      amazonLink: '#'
+      amazonLink: 'https://www.amazon.com/dp/B0F8XXP2BJ?&linkCode=ll1&tag=bkelly623-20&linkId=20dd766ccd4a5808405642a4dee89805&language=en_US&ref_=as_li_ss_tl'
     },
     {
-      id: 5,
+      id: 6,
       title: 'Impaled By The Obsidian Stag',
       imagePath: '/images/Impaled By The Obsidian Stag.jpg',
       description: 'She was meant to be a sacrifice—offered to the forest. But when the Obsidian Stag rose with antlers and need, he demanded her body. Now her womb swells with divine seed in this dark, explicit monster romance featuring sacred claiming and forbidden rituals.',
@@ -61,15 +69,15 @@ export default function BooksPage() {
       amazonLink: null
     },
     {
-      id: 6,
-      title: 'Seduced By The Far Lord',
-      imagePath: '/images/Seduced By The Far Lord.jpg',
+      id: 7,
+      title: 'Seduced By The Fae Lord',
+      imagePath: '/images/Seduced By The Fae Lord.jpg',
       description: 'An offering to the cursed forest, she expected to be devoured. Instead, she was claimed. Featuring explicit knotting, claiming rituals, and a forbidden bond with an alpha monster that leaves her changed forever.',
-      status: 'Coming Soon',
-      amazonLink: null
+      status: 'Available Now',
+      amazonLink: 'https://www.amazon.com/dp/B0F8Y8PNF1?&linkCode=ll1&tag=bkelly623-20&linkId=18117f17b400044c50c8d18e9b5f6ef6&language=en_US&ref_=as_li_ss_tl'
     },
     {
-      id: 7,
+      id: 8,
       title: 'Claimed By The Living Shadow',
       imagePath: '/images/Claimed By The Living Shadow.jpg',
       description: 'Bound and offered to an ancient force that shouldn\'t exist, Mara is claimed by a living shadow—one who doesn\'t take her life, but her body, her heat, and her destiny. Featuring sacred breeding rituals, divine pregnancy, multi-monster worship scenes, and a heroine who becomes a sanctuary for entire worlds.',
@@ -77,7 +85,7 @@ export default function BooksPage() {
       amazonLink: 'https://www.amazon.com/dp/B0F8Y6TG56?&linkCode=ll1&tag=bkelly623-20&linkId=d8cfe1e7943c39372e34ba7327818cb1&language=en_US&ref_=as_li_ss_tl'
     },
     {
-      id: 8,
+      id: 9,
       title: 'Impregnated By The Void Prince',
       imagePath: '/images/Impregnated By The Void Prince.jpg',
       description: 'When Aeloria is offered as a virgin sacrifice to the forest gods, she is claimed by something without a name—just tentacles and purpose. She is stretched, marked, and impregnated by something ancient and divine in this unhinged tale of monster breeding, triple penetration, ritual worship, and a heroine who transforms from trembling sacrifice to the origin of a new world.',

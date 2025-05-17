@@ -49,8 +49,8 @@ const BookGrid = () => {
     },
     {
       id: 6,
-      title: 'Seduced By The Far Lord',
-      imagePath: '/images/Seduced By The Far Lord.jpg',
+      title: 'Seduced By The Fae Lord',
+      imagePath: '/images/Seduced By The Fae Lord.jpg',
       description: 'Explicit knotting, claiming, and a forbidden bond with an alpha monster that leaves her changed forever.',
       status: 'Available Now',
       amazonLink: 'https://www.amazon.com/dp/B0F8Y8PNF1?&linkCode=ll1&tag=bkelly623-20&linkId=18117f17b400044c50c8d18e9b5f6ef6&language=en_US&ref_=as_li_ss_tl',
