@@ -1,315 +1,409 @@
 /* app/components/HeroSection.module.css */
+/* Add these styles to your existing HeroSection.module.css file */
 
 .heroSection {
-    background: linear-gradient(to bottom, #0a0a0a, #13151c);
-    color: #fff;
-    padding: 3rem 1rem;
-    position: relative;
-    overflow: hidden;
-  }
-  
-  .heroSection::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: url('/images/tentacle-bg.svg') no-repeat;
-    background-size: contain;
-    background-position: left bottom;
-    opacity: 0.05;
-    z-index: 0;
-  }
-  
-  .heroContent {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-    z-index: 1;
-  }
-  
-  .heroText {
-    flex: 1;
-    padding-right: 2rem;
-  }
-  
-  .authorName {
-    font-size: 3.5rem;
-    color: #d4af37; /* Gold color */
-    margin: 0;
-    font-weight: 700;
-    font-family: 'Playfair Display', serif;
-    text-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
-  }
-  
-  .authorTagline {
-    font-size: 1.5rem;
-    color: #d4af37;
-    margin: 0.5rem 0 1.5rem;
-    font-weight: 400;
-  }
-  
-  .heroTagline {
-    font-size: 1.25rem;
-    font-style: italic;
-    margin-bottom: 2rem;
-    color: #e0e0e0;
-  }
-  
-  .bookDisplay {
-    display: flex;
-    align-items: center;
+  background: linear-gradient(to bottom, #0a0a0a, #13151c);
+  color: #fff;
+  padding: 4rem 1rem 5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.heroSection::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('/images/tentacle-bg.svg') no-repeat;
+  background-size: contain;
+  background-position: left bottom;
+  opacity: 0.05;
+  z-index: 0;
+}
+
+.heroContent {
+  max-width: 1300px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.heroHeader {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.authorName {
+  font-size: 3.5rem;
+  color: #d4af37; /* Gold color */
+  margin: 0;
+  font-weight: 700;
+  font-family: 'Playfair Display', serif;
+  text-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+}
+
+.authorTagline {
+  font-size: 1.5rem;
+  color: #d4af37;
+  margin: 0.5rem 0 1rem;
+  font-weight: 400;
+}
+
+.heroTagline {
+  font-size: 1.25rem;
+  font-style: italic;
+  color: #e0e0e0;
+}
+
+.threeColumnLayout {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr 1fr;
+  gap: 2rem;
+  width: 100%;
+  align-items: flex-start;
+}
+
+.bookColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.bookCoverWrapper {
+  position: relative;
+  margin-bottom: 1.5rem;
+  width: 220px;
+  transition: transform 0.3s ease;
+}
+
+.bookCoverWrapper:hover {
+  transform: translateY(-5px);
+}
+
+.bookCover {
+  width: 100%;
+  height: auto;
+  box-shadow: 0 0 30px rgba(212, 175, 55, 0.2);
+  border-radius: 5px;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+.freeTag {
+  position: absolute;
+  top: 10px;
+  right: -10px;
+  background-color: #d4af37;
+  color: #000;
+  font-weight: 700;
+  padding: 0.4rem 1.2rem;
+  font-size: 0.9rem;
+  border-radius: 2px;
+  transform: rotate(8deg);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+}
+
+.bookInfo {
+  max-width: 280px;
+}
+
+.bookTitle {
+  font-size: 1.2rem;
+  color: #d4af37;
+  margin-bottom: 0.8rem;
+  font-weight: 600;
+}
+
+.bookDescription {
+  font-size: 0.95rem;
+  color: #e0e0e0;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.bookDescription p {
+  margin-bottom: 0.7rem;
+}
+
+.goldAccent {
+  color: #d4af37;
+  font-weight: 500;
+}
+
+.emphasisText {
+  font-style: italic;
+}
+
+.tropes {
+  font-size: 0.85rem;
+  color: #aaa;
+  font-style: italic;
+  display: block;
+  border-top: 1px solid rgba(212, 175, 55, 0.2);
+  padding-top: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.formColumn {
+  background-color: rgba(10, 10, 14, 0.7);
+  backdrop-filter: blur(5px);
+  padding: 2.5rem;
+  border-radius: 8px;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3), 0 0 20px rgba(212, 175, 55, 0.1);
+}
+
+.formTitle {
+  font-size: 1.75rem;
+  color: #d4af37;
+  margin: 0 0 1rem;
+  text-align: center;
+  font-weight: 700;
+}
+
+.formSubtitle {
+  font-size: 1rem;
+  color: #e0e0e0;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.signupForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.formField {
+  margin-bottom: 1rem;
+}
+
+.formInput {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(212, 175, 55, 0.5);
+  color: #fff;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.formInput:focus {
+  outline: none;
+  border-color: #d4af37;
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+}
+
+.formInput::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.subgenreSection {
+  margin: 0.5rem 0 1.5rem;
+}
+
+.subgenreTitle {
+  font-size: 0.9rem;
+  color: #e0e0e0;
+  margin-bottom: 0.5rem;
+}
+
+.checkboxGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+}
+
+.checkboxLabel {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: #e0e0e0;
+  cursor: pointer;
+}
+
+.checkbox {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(212, 175, 55, 0.5);
+  border-radius: 3px;
+  cursor: pointer;
+  position: relative;
+}
+
+.checkbox:checked {
+  background-color: rgba(212, 175, 55, 0.7);
+}
+
+.checkbox:checked::after {
+  content: '✓';
+  position: absolute;
+  color: #000;
+  font-size: 12px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.submitButton {
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  background-color: #d4af37;
+  color: #000;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 1px;
+  margin-top: 0.5rem;
+}
+
+.submitButton:hover {
+  background-color: #e5c158;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
+}
+
+.submitButton:disabled {
+  background-color: #8a7427;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.privacy {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.6);
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.errorMessage {
+  color: #ff6b6b;
+  font-size: 0.9rem;
+  margin: 0.5rem 0;
+  text-align: center;
+}
+
+.successMessage {
+  text-align: center;
+  padding: 1rem;
+}
+
+.successTitle {
+  font-size: 2rem;
+  color: #d4af37;
+  margin-bottom: 1.5rem;
+}
+
+.successText {
+  color: #e0e0e0;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.successNote {
+  color: #d4af37;
+  font-style: italic;
+  font-size: 1.1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1100px) {
+  .threeColumnLayout {
+    grid-template-columns: 1fr 1.2fr 1fr;
     gap: 1.5rem;
-    margin-top: 2rem;
   }
   
-  .bookCover {
+  .bookCoverWrapper {
     width: 180px;
-    height: auto;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
-    border: 1px solid rgba(212, 175, 55, 0.3);
-    transition: transform 0.3s ease;
-  }
-  
-  .bookCover:hover {
-    transform: scale(1.05);
   }
   
   .bookInfo {
-    max-width: 300px;
-  }
-  
-  .seriesTitle {
-    font-size: 1rem;
-    color: #d4af37;
-    margin: 0 0 0.5rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    max-width: 250px;
   }
   
   .bookTitle {
-    font-size: 1.5rem;
-    color: #d4af37;
-    margin: 0 0 1rem;
-    font-weight: 700;
-    line-height: 1.2;
+    font-size: 1.1rem;
   }
   
-  .bookTagline {
-    font-size: 1rem;
-    font-style: italic;
-    color: #e0e0e0;
-  }
-  
-  .formContainer {
-    flex: 1;
-    max-width: 450px;
-    background-color: rgba(10, 10, 14, 0.7);
-    backdrop-filter: blur(5px);
-    padding: 2.5rem;
-    border-radius: 8px;
-    border: 1px solid rgba(212, 175, 55, 0.3);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3), 0 0 20px rgba(212, 175, 55, 0.1);
-  }
-  
-  .formTitle {
-    font-size: 1.75rem;
-    color: #d4af37;
-    margin: 0 0 1rem;
-    text-align: center;
-    font-weight: 700;
-  }
-  
-  .formSubtitle {
-    font-size: 1rem;
-    color: #e0e0e0;
-    margin-bottom: 1.5rem;
-    text-align: center;
-  }
-  
-  .signupForm {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .formField {
-    margin-bottom: 1rem;
-  }
-  
-  .formInput {
-    width: 100%;
-    padding: 0.75rem 1rem;
-    font-size: 1rem;
-    background-color: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(212, 175, 55, 0.5);
-    color: #fff;
-    border-radius: 4px;
-    transition: all 0.3s ease;
-  }
-  
-  .formInput:focus {
-    outline: none;
-    border-color: #d4af37;
-    box-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
-  }
-  
-  .formInput::placeholder {
-    color: rgba(255, 255, 255, 0.6);
-  }
-  
-  .subgenreSection {
-    margin: 0.5rem 0 1.5rem;
-  }
-  
-  .subgenreTitle {
+  .bookDescription {
     font-size: 0.9rem;
-    color: #e0e0e0;
-    margin-bottom: 0.5rem;
+  }
+  
+  .tropes {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .threeColumnLayout {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  
+  .bookColumn {
+    order: 2;
+  }
+  
+  .formColumn {
+    order: 1;
+  }
+  
+  .leftBook, .rightBook {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    text-align: left;
+    gap: 1.5rem;
+    align-items: center;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .bookInfo {
+    max-width: none;
+  }
+  
+  .bookDescription {
+    text-align: left;
+  }
+}
+
+@media (max-width: 576px) {
+  .authorName {
+    font-size: 2.5rem;
+  }
+  
+  .formColumn {
+    padding: 1.5rem;
   }
   
   .checkboxGrid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0.5rem;
+    grid-template-columns: 1fr;
   }
   
-  .checkboxLabel {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-size: 0.9rem;
-    color: #e0e0e0;
-    cursor: pointer;
-  }
-  
-  .checkbox {
-    appearance: none;
-    width: 18px;
-    height: 18px;
-    background-color: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(212, 175, 55, 0.5);
-    border-radius: 3px;
-    cursor: pointer;
-    position: relative;
-  }
-  
-  .checkbox:checked {
-    background-color: rgba(212, 175, 55, 0.7);
-  }
-  
-  .checkbox:checked::after {
-    content: '✓';
-    position: absolute;
-    color: #000;
-    font-size: 12px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  
-  .submitButton {
-    padding: 1rem;
-    font-size: 1rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    background-color: #d4af37;
-    color: #000;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    letter-spacing: 1px;
-    margin-top: 0.5rem;
-  }
-  
-  .submitButton:hover {
-    background-color: #e5c158;
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
-  }
-  
-  .submitButton:disabled {
-    background-color: #8a7427;
-    cursor: not-allowed;
-    transform: none;
-    box-shadow: none;
-  }
-  
-  .privacy {
-    font-size: 0.8rem;
-    color: rgba(255, 255, 255, 0.6);
-    text-align: center;
-    margin-top: 1rem;
-  }
-  
-  .errorMessage {
-    color: #ff6b6b;
-    font-size: 0.9rem;
-    margin: 0.5rem 0;
+  .leftBook, .rightBook {
+    grid-template-columns: 1fr;
     text-align: center;
   }
   
-  .successMessage {
+  .bookCoverWrapper {
+    margin: 0 auto 1.5rem;
+  }
+  
+  .bookDescription {
     text-align: center;
-    padding: 1rem;
   }
-  
-  .successTitle {
-    font-size: 2rem;
-    color: #d4af37;
-    margin-bottom: 1.5rem;
-  }
-  
-  .successText {
-    color: #e0e0e0;
-    font-size: 1.1rem;
-    margin-bottom: 1.5rem;
-    line-height: 1.6;
-  }
-  
-  .successNote {
-    color: #d4af37;
-    font-style: italic;
-    font-size: 1.1rem;
-  }
-  
-  /* Media queries for responsiveness */
-  @media (max-width: 992px) {
-    .heroContent {
-      flex-direction: column;
-      text-align: center;
-    }
-    
-    .heroText {
-      padding-right: 0;
-      margin-bottom: 3rem;
-    }
-    
-    .bookDisplay {
-      flex-direction: column;
-      align-items: center;
-    }
-    
-    .formContainer {
-      width: 100%;
-    }
-  }
-  
-  @media (max-width: 576px) {
-    .authorName {
-      font-size: 2.5rem;
-    }
-    
-    .formContainer {
-      padding: 1.5rem;
-    }
-    
-    .checkboxGrid {
-      grid-template-columns: 1fr;
-    }
-  }
+}

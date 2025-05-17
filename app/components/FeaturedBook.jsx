@@ -38,13 +38,13 @@ const FeaturedBook = () => {
       <div className="tentacle-divider"></div>
       
       <div className={styles.featuredWrapper}>
-        <h2 className={`${styles.sectionTitle} shimmer-gold glow-underline ${isVisible ? 'fade-in-up visible' : 'fade-in-up'}`}>Featured Release</h2>
+        <h2 className={`${styles.sectionTitle} shimmer-gold glow-underline ${isVisible ? 'fade-in-up visible' : 'fade-in-up'}`}>Latest Release</h2>
         
         <div className={styles.featuredContent}>
           <div className={`${styles.coverWrapper} ${isVisible ? 'fade-in-left visible' : 'fade-in-left'}`} style={{ transitionDelay: '0.2s' }}>
             <Image
-              src="/images/Bonded To The Dragon Lord.jpg"
-              alt="Cover of Bonded To The Dragon Lord"
+              src="/images/Claimed By The Living Shadow.jpg"
+              alt="Cover of Claimed By The Living Shadow"
               width={350}
               height={525}
               className={`${styles.coverImage} cover-transform`}
@@ -53,27 +53,32 @@ const FeaturedBook = () => {
           </div>
           
           <div className={`${styles.bookInfo} ${isVisible ? 'fade-in-right visible' : 'fade-in-right'}`} style={{ transitionDelay: '0.3s' }}>
-            <h3 className={`${styles.bookTitle} shimmer-gold`}>Bonded To The Dragon Lord</h3>
-            <p className={styles.releaseStatus}>Coming Soon</p>
+            <h3 className={`${styles.bookTitle} shimmer-gold`}>Claimed By The Living Shadow</h3>
+            <p className={styles.releaseStatus}>Available Now</p>
             <div className={styles.bookDescription}>
               <p className={isVisible ? 'fade-in-up visible' : 'fade-in-up'} style={{ transitionDelay: '0.4s' }}>
-                "He was supposed to devour me. Instead, he claimed me. Body, bond… and soul."
+                "She was meant to be a sacrifice. But the shadow didn't want her blood. It wanted her womb."
               </p>
               <p className={isVisible ? 'fade-in-up visible' : 'fade-in-up'} style={{ transitionDelay: '0.5s' }}>
-                When offered as a sacrifice to the mountain's most feared monster, she expected death. Instead, she found Kael—wings like shadow, eyes like flame, and a bond that won't let go.
+                Bound and offered to an ancient force that shouldn't exist, Mara is claimed by a living shadow—one who doesn't take her life, but her body, her heat, and her destiny. His touch rewrites her from the inside out.
               </p>
               <p className={isVisible ? 'fade-in-up visible' : 'fade-in-up'} style={{ transitionDelay: '0.6s' }}>
-                Every touch makes the mountain tremble. Every separation ignites the fire within. As others seek to worship, imitate, or steal their magic, Kael fights with primal fury to protect what's his.
+                Her belly swells. Her womb glows. And her body becomes the gate to a realm no monster dares enter—unless they're ready to be ruled.
               </p>
               <p className={isVisible ? 'fade-in-up visible' : 'fade-in-up'} style={{ transitionDelay: '0.7s' }}>
-                Perfect for readers who crave possessive monsters, fated mates, and explosive endings.
+                Perfect for readers who crave sacred breeding rituals, divine pregnancy, monster worship, and relentless obsession.
               </p>
             </div>
             
             <div className={`${styles.ctaWrapper} ${isVisible ? 'fade-in-up visible' : 'fade-in-up'}`} style={{ transitionDelay: '0.8s' }}>
-              <span className={`${styles.comingSoon} pulse-effect`}>
-                Amazon Pre-order Coming Soon
-              </span>
+              <a 
+                href="https://www.amazon.com/dp/B0F8Y6TG56?&linkCode=ll1&tag=bkelly623-20&linkId=d8cfe1e7943c39372e34ba7327818cb1&language=en_US&ref_=as_li_ss_tl" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className={`${styles.amazonButton} pulse-effect`}
+              >
+                Read on Amazon
+              </a>
               <p className={styles.seriesTag}>Part of the <span className="shimmer-gold">Monstrously Claimed</span> series</p>
             </div>
           </div>

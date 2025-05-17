@@ -70,11 +70,19 @@ export default function BooksPage() {
     },
     {
       id: 7,
-      title: 'Bonded To The Dragon Lord',
-      imagePath: '/images/Bonded To The Dragon Lord.jpg',
-      description: 'When offered as a sacrifice to the mountain\'s most feared monster, she found Kael—a dragon lord with wings like shadow and eyes like flame. Every touch makes the mountain tremble in this tale of possessive monsters, fated mates, and explosive endings.',
+      title: 'Claimed By The Living Shadow',
+      imagePath: '/images/Claimed By The Living Shadow.jpg',
+      description: 'Bound and offered to an ancient force that shouldn\'t exist, Mara is claimed by a living shadow—one who doesn\'t take her life, but her body, her heat, and her destiny. Featuring sacred breeding rituals, divine pregnancy, multi-monster worship scenes, and a heroine who becomes a sanctuary for entire worlds.',
       status: 'Available Now',
-      amazonLink: '#'
+      amazonLink: 'https://www.amazon.com/dp/B0F8Y6TG56?&linkCode=ll1&tag=bkelly623-20&linkId=d8cfe1e7943c39372e34ba7327818cb1&language=en_US&ref_=as_li_ss_tl'
+    },
+    {
+      id: 8,
+      title: 'Impregnated By The Void Prince',
+      imagePath: '/images/Impregnated By The Void Prince.jpg',
+      description: 'When Aeloria is offered as a virgin sacrifice to the forest gods, she is claimed by something without a name—just tentacles and purpose. She is stretched, marked, and impregnated by something ancient and divine in this unhinged tale of monster breeding, triple penetration, ritual worship, and a heroine who transforms from trembling sacrifice to the origin of a new world.',
+      status: 'Available Now',
+      amazonLink: 'https://www.amazon.com/dp/B0F8YFYNZ4?&linkCode=ll1&tag=bkelly623-20&linkId=008313d1a6000547ed42fd7eb427b210&language=en_US&ref_=as_li_ss_tl'
     }
   ];
 
@@ -155,8 +163,6 @@ export default function BooksPage() {
         </div>
       </section>
 
-      {/* Tentacle divider between sections */}
-      <div className="tentacle-divider"></div>
 
       <SimpleBookSignup />
     </main>

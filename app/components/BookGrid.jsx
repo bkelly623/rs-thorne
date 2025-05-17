@@ -1,4 +1,4 @@
-// app/components/BookGrid.jsx
+// // app/components/BookGrid.jsx
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -13,7 +13,7 @@ const BookGrid = () => {
       imagePath: '/images/Claimed By The Kraken.jpg',
       description: 'A dark monster romance featuring tentacle claiming, divine obsession, breeding altars, and a heroine who finds power in surrender to an ancient sea god.',
       status: 'Available Now',
-      amazonLink: '#', // Placeholder
+      amazonLink: 'https://www.amazon.com/dp/B0F8R9KC6X?&linkCode=ll1&tag=bkelly623-20&linkId=1c7e970e45db2259e927286048e76cc3&language=en_US&ref_=as_li_ss_tl',
     },
     {
       id: 2,
@@ -21,7 +21,7 @@ const BookGrid = () => {
       imagePath: '/images/Pierced By The Savage Thorns.jpg',
       description: 'Expect knotting, obsessive possession, sentient vines, primal heat, and a brutal forest god who worships his mate with reverence and ruin.',
       status: 'Available Now',
-      amazonLink: '#', // Placeholder
+      amazonLink: 'https://www.amazon.com/dp/B0F8VVWNXM?&linkCode=ll1&tag=bkelly623-20&linkId=c57d5fa99b7f416a2cda128e9f7ba691&language=en_US&ref_=as_li_ss_tl',
     },
     {
       id: 3,
@@ -29,7 +29,7 @@ const BookGrid = () => {
       imagePath: '/images/Ravaged By The Hollow Beast.jpg',
       description: 'Packed with obsessive love, savage claiming, and scorching primal heat. A monster made to ruin you—beautifully.',
       status: 'Available Now',
-      amazonLink: '#', // Placeholder
+      amazonLink: 'https://www.amazon.com/dp/B0F8WR6WWM?&linkCode=ll1&tag=bkelly623-20&linkId=ea3cc540673defa97d964644c1b081ef&language=en_US&ref_=as_li_ss_tl',
     },
     {
       id: 4,
@@ -37,7 +37,7 @@ const BookGrid = () => {
       imagePath: '/images/claiming-the-monster-god.jpg',
       description: 'A reverse harem of fallen gods, explicit scenes of worship, and a new goddess rising to power through pleasure and domination.',
       status: 'Available Now',
-      amazonLink: '#', // Placeholder
+      amazonLink: 'https://www.amazon.com/dp/B0F8XXP2BJ?&linkCode=ll1&tag=bkelly623-20&linkId=20dd766ccd4a5808405642a4dee89805&language=en_US&ref_=as_li_ss_tl',
     },
     {
       id: 5,
@@ -52,8 +52,8 @@ const BookGrid = () => {
       title: 'Seduced By The Far Lord',
       imagePath: '/images/Seduced By The Far Lord.jpg',
       description: 'Explicit knotting, claiming, and a forbidden bond with an alpha monster that leaves her changed forever.',
-      status: 'Coming Soon',
-      amazonLink: null, // No link yet
+      status: 'Available Now',
+      amazonLink: 'https://www.amazon.com/dp/B0F8Y8PNF1?&linkCode=ll1&tag=bkelly623-20&linkId=18117f17b400044c50c8d18e9b5f6ef6&language=en_US&ref_=as_li_ss_tl',
     }
   ];
 

@@ -1,5 +1,6 @@
 'use client';
 import { useState } from 'react';
+import Link from 'next/link';
 import styles from './download.module.css';
 
 export default function DownloadChoicePage() {
@@ -7,38 +8,103 @@ export default function DownloadChoicePage() {
 
   return (
     <div className={styles.container}>
-      <h1 className={styles.title}>Download Your Free Book</h1>
+      <h1 className={styles.title}>Download Your Free Books</h1>
       
-      <p className={styles.subtitle}>
-        "Claimed, Crowned, Consumed" is available in multiple formats for your convenience.
-      </p>
-      
-      <div className={styles.grid}>
-        <div className={styles.card}>
-          <h2 className={styles.cardTitle}>EPUB Format</h2>
-          <p className={styles.cardText}>
-            <strong>Recommended for:</strong> Most e-readers (Kobo, Nook), tablets, 
-            and smartphones. Text adjusts to fit your screen.
-          </p>
-          <a 
-            href="/api/get-book?format=epub" 
-            className={styles.button}
-          >
-            Download EPUB
-          </a>
+      <div className={styles.booksContainer}>
+        <div className={styles.bookSection}>
+          <div className={styles.bookHeading}>
+            <img 
+              src="/images/Claimed, Crowned, Consumed.jpg" 
+              alt="Claimed, Crowned, Consumed cover" 
+              className={styles.bookThumbnail}
+            />
+            <div>
+              <h2 className={styles.bookSectionTitle}>Claimed, Crowned, Consumed</h2>
+              <p className={styles.bookSectionSubtitle}>
+                Available in multiple formats for your convenience.
+              </p>
+            </div>
+          </div>
+          
+          <div className={styles.grid}>
+            <div className={styles.card}>
+              <h3 className={styles.cardTitle}>EPUB Format</h3>
+              <p className={styles.cardText}>
+                <strong>Recommended for:</strong> Most e-readers (Kobo, Nook), tablets, 
+                and smartphones. Text adjusts to fit your screen.
+              </p>
+              <a 
+                href="/downloads/Claimed-Crowned-Consumed.epub" 
+                className={styles.button}
+                download
+              >
+                Download EPUB
+              </a>
+            </div>
+            
+            <div className={styles.card}>
+              <h3 className={styles.cardTitle}>PDF Format</h3>
+              <p className={styles.cardText}>
+                <strong>Recommended for:</strong> Computers, printing, and exact page layout preservation.
+              </p>
+              <a 
+                href="/downloads/Claimed-Crowned-Consumed.pdf" 
+                className={styles.button}
+                download
+              >
+                Download PDF
+              </a>
+            </div>
+          </div>
         </div>
+
+        <div className={styles.divider}></div>
         
-        <div className={styles.card}>
-          <h2 className={styles.cardTitle}>PDF Format</h2>
-          <p className={styles.cardText}>
-            <strong>Recommended for:</strong> Computers, printing, and exact page layout preservation.
-          </p>
-          <a 
-            href="/api/get-book?format=pdf" 
-            className={styles.button}
-          >
-            Download PDF
-          </a>
+        <div className={styles.bookSection}>
+          <div className={styles.bookHeading}>
+            <img 
+              src="/images/Bonded To The Dragon Lord.jpg" 
+              alt="Bonded To The Dragon Lord cover" 
+              className={styles.bookThumbnail}
+            />
+            <div>
+              <h2 className={styles.bookSectionTitle}>Bonded To The Dragon Lord</h2>
+              <p className={styles.bookSectionSubtitle}>
+                Available in multiple formats for your convenience.
+              </p>
+            </div>
+          </div>
+          
+          <div className={styles.grid}>
+            <div className={styles.card}>
+              <h3 className={styles.cardTitle}>EPUB Format</h3>
+              <p className={styles.cardText}>
+                <strong>Recommended for:</strong> Most e-readers (Kobo, Nook), tablets, 
+                and smartphones. Text adjusts to fit your screen.
+              </p>
+              <a 
+                href="/downloads/Bonded-To-The-Dragon-Lord.epub" 
+                className={styles.button}
+                download
+              >
+                Download EPUB
+              </a>
+            </div>
+            
+            <div className={styles.card}>
+              <h3 className={styles.cardTitle}>PDF Format</h3>
+              <p className={styles.cardText}>
+                <strong>Recommended for:</strong> Computers, printing, and exact page layout preservation.
+              </p>
+              <a 
+                href="/downloads/Bonded-To-The-Dragon-Lord.pdf" 
+                className={styles.button}
+                download
+              >
+                Download PDF
+              </a>
+            </div>
+          </div>
         </div>
       </div>
       

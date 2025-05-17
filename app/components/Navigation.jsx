@@ -81,7 +81,7 @@ const Navigation = () => {
             className={`${styles.navLink} ${styles.ctaLink} ${pathname === '/free-book' ? styles.active : ''}`}
             onClick={() => setIsMenuOpen(false)}
           >
-            Free Book
+            Free Books
           </Link>
         </div>
       </div>
