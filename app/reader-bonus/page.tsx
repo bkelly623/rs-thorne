@@ -39,7 +39,7 @@ export default function ReaderBonus() {
         const speedAttr = bg.getAttribute('data-speed') || '0.2';
         const speed = parseFloat(speedAttr);
         const yPos = -(window.pageYOffset * speed);
-        bg.style.transform = `translateY(${yPos}px)`;
+        (bg as HTMLElement).style.transform = `translateY(${yPos}px)`;
       });
     };
 
