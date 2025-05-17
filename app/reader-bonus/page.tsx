@@ -60,7 +60,10 @@ export default function ReaderBonus() {
     const createAmbientParticles = () => {
       const ambientBg = document.createElement('div');
       ambientBg.classList.add('ambient-bg');
-      document.querySelector(`.${styles.bonusPageContainer}`).appendChild(ambientBg);
+      const container = document.querySelector(`.${styles.bonusPageContainer}`);
+      if (container) {
+        container.appendChild(ambientBg);
+      }
       
       // Create particles
       for (let i = 0; i < 15; i++) {
