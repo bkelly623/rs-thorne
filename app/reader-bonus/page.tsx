@@ -36,8 +36,9 @@ export default function ReaderBonus() {
       const parallaxBgs = document.querySelectorAll('.parallax-bg');
       
       parallaxBgs.forEach(bg => {
-        const speed = bg.getAttribute('data-speed') || 0.2;
-        const yPos = -(window.pageYOffset * parseFloat(speed));
+        const speedAttr = bg.getAttribute('data-speed') || '0.2';
+        const speed = parseFloat(speedAttr);
+        const yPos = -(window.pageYOffset * speed);
         bg.style.transform = `translateY(${yPos}px)`;
       });
     };
@@ -243,7 +244,7 @@ export default function ReaderBonus() {
             </div>
           </div>
         </div>
-        
+
         {/* CLAIMED BY THE LIVING SHADOW */}
         <div className={styles.bookBonusContainer} id="claimed-by-the-living-shadow">
           <div className={styles.bookCoverColumn}>
@@ -351,7 +352,7 @@ export default function ReaderBonus() {
             </div>
           </div>
         </div>
-
+        
         {/* DEVOURED BY THE VEIL KING */}
         <div className={styles.bookBonusContainer} id="devoured-by-the-veil-king">
           <div className={styles.bookCoverColumn}>
@@ -622,8 +623,8 @@ export default function ReaderBonus() {
           </div>
         </div>
 
-        {/* SEDUCED BY THE FAE LORD */}
-        <div className={styles.bookBonusContainer} id="seduced-by-the-fae-lord">
+        {/* SEDUCED BY THE FAR LORD */}
+        <div className={styles.bookBonusContainer} id="seduced-by-the-far-lord">
           <div className={styles.bookCoverColumn}>
             <div className={styles.bookCoverWrapper}>
               <Image 
@@ -637,12 +638,12 @@ export default function ReaderBonus() {
           </div>
           
           <div className={styles.bonusContentColumn}>
-            <h2 className={`${styles.bookTitle} shimmer-gold`}>SEDUCED BY THE FAE LORD</h2>
+            <h2 className={`${styles.bookTitle} shimmer-gold`}>SEDUCED BY THE FAR LORD</h2>
             <h3 className={styles.bonusContentTitle}>EXCLUSIVE BONUS CONTENT</h3>
             
             <p className={styles.bonusDescription}>
               Distance is an illusion when desire bridges worlds. This extended chapter explores 
-              how the Fae Lord claims his chosen bride across dimensions—his touch manifesting 
+              how the Far Lord claims his chosen bride across dimensions—his touch manifesting 
               in impossible ways, manipulating her pleasure from realms beyond comprehension. 
               Experience the intoxicating surrender to sensations that defy the laws of physical existence.
             </p>
