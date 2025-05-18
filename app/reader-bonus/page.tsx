@@ -626,13 +626,13 @@ export default function ReaderBonus() {
           </div>
         </div>
 
-        {/* SEDUCED BY THE FAR LORD */}
-        <div className={styles.bookBonusContainer} id="seduced-by-the-far-lord">
+        {/* SEDUCED BY THE FAE LORD */}
+        <div className={styles.bookBonusContainer} id="seduced-by-the-fae-lord">
           <div className={styles.bookCoverColumn}>
             <div className={styles.bookCoverWrapper}>
               <Image 
-                src="/images/Seduced By The Far Lord.jpg"
-                alt="Seduced By The Far Lord Book Cover"
+                src="/images/Seduced By The Fae Lord.jpg"
+                alt="Seduced By The Fae Lord Book Cover"
                 width={300}
                 height={450}
                 className={`${styles.bookCover} cover-transform`}
@@ -641,7 +641,7 @@ export default function ReaderBonus() {
           </div>
           
           <div className={styles.bonusContentColumn}>
-            <h2 className={`${styles.bookTitle} shimmer-gold`}>SEDUCED BY THE FAR LORD</h2>
+            <h2 className={`${styles.bookTitle} shimmer-gold`}>SEDUCED BY THE FAE LORD</h2>
             <h3 className={styles.bonusContentTitle}>EXCLUSIVE BONUS CONTENT</h3>
             
             <p className={styles.bonusDescription}>
