@@ -21,8 +21,8 @@ export default function ChatPage() {
   // State for loading
   const [isLoading, setIsLoading] = useState(false);
   
-  // Function to handle character change
-  const handleCharacterChange = (characterId) => {
+  // Function to handle character change - added proper type for characterId
+  const handleCharacterChange = (characterId: string) => {
     const character = characters.find(char => char.id === characterId);
     if (character && character.id !== selectedCharacter.id) {
       setSelectedCharacter(character);
@@ -37,7 +37,7 @@ export default function ChatPage() {
   };
   
   // Function to handle sending message
-  const handleSendMessage = async (message) => {
+  const handleSendMessage = async (message: string) => {
     // Add user message to chat
     const updatedMessages = [
       ...messages,

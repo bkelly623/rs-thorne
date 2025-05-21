@@ -1,9 +1,23 @@
-// /app/chat/components/CharacterSelector.jsx
+// /app/chat/components/CharacterSelector.tsx (renamed from .jsx to .tsx)
 import { useState } from 'react';
 import Image from 'next/image';
 import styles from './CharacterSelector.module.css';
 
-export default function CharacterSelector({ characters, selectedCharacterId, onSelectCharacter }) {
+interface Character {
+  id: string;
+  name: string;
+  book: string;
+  tagline: string;
+  coverImage: string;
+}
+
+interface CharacterSelectorProps {
+  characters: Character[];
+  selectedCharacterId: string;
+  onSelectCharacter: (id: string) => void;
+}
+
+export default function CharacterSelector({ characters, selectedCharacterId, onSelectCharacter }: CharacterSelectorProps) {
   const [isOpen, setIsOpen] = useState(false);
   
   const selectedCharacter = characters.find(char => char.id === selectedCharacterId);
@@ -14,16 +28,16 @@ export default function CharacterSelector({ characters, selectedCharacterId, onS
         <div className={styles.characterPreview}>
           <div className={styles.coverImageWrapper}>
             <Image 
-              src={selectedCharacter.coverImage} 
-              alt={selectedCharacter.book}
+              src={selectedCharacter?.coverImage || ''} 
+              alt={selectedCharacter?.book || ''}
               width={60}
               height={90}
               className={styles.coverImage}
             />
           </div>
           <div className={styles.characterInfo}>
-            <h3 className={styles.characterName}>{selectedCharacter.name}</h3>
-            <p className={styles.characterTagline}>{selectedCharacter.tagline}</p>
+            <h3 className={styles.characterName}>{selectedCharacter?.name}</h3>
+            <p className={styles.characterTagline}>{selectedCharacter?.tagline}</p>
           </div>
         </div>
         <div className={styles.selectorArrow}>

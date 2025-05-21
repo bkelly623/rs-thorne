@@ -1,9 +1,24 @@
-// /app/chat/components/ChatMessages.jsx
+// /app/chat/components/ChatMessages.tsx (renamed from .jsx to .tsx)
 import styles from './ChatMessages.module.css';
 
-export default function ChatMessages({ messages, character }) {
+interface Message {
+  role: 'user' | 'assistant';
+  content: string;
+}
+
+interface Character {
+  book: string;
+  bookPromotions: string[];
+}
+
+interface ChatMessagesProps {
+  messages: Message[];
+  character: Character;
+}
+
+export default function ChatMessages({ messages, character }: ChatMessagesProps) {
   // Function to format message content with line breaks
-  const formatMessage = (content) => {
+  const formatMessage = (content: string) => {
     return content.split('\n').map((line, i) => (
       <span key={i}>
         {line}
@@ -13,7 +28,7 @@ export default function ChatMessages({ messages, character }) {
   };
   
   // Function to check if message has book promotion
-  const hasBookPromotion = (content) => {
+  const hasBookPromotion = (content: string) => {
     return character.bookPromotions.some(promo => 
       content.includes(promo) || 
       content.includes(character.book)

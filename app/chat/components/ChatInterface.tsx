@@ -1,18 +1,38 @@
-// /app/chat/components/ChatInterface.jsx
+// /app/chat/components/ChatInterface.tsx (renamed from .jsx to .tsx)
 import { useState, useRef, useEffect } from 'react';
 import styles from './ChatInterface.module.css';
 import ChatMessages from './ChatMessages';
 
-export default function ChatInterface({ messages, character, onSendMessage, isLoading }) {
+interface Message {
+  role: 'user' | 'assistant';
+  content: string;
+}
+
+interface Character {
+  id: string;
+  name: string;
+  book: string;
+  amazonLink: string;
+  bookPromotions: string[];
+}
+
+interface ChatInterfaceProps {
+  messages: Message[];
+  character: Character;
+  onSendMessage: (message: string) => void;
+  isLoading: boolean;
+}
+
+export default function ChatInterface({ messages, character, onSendMessage, isLoading }: ChatInterfaceProps) {
   const [inputValue, setInputValue] = useState('');
-  const messagesEndRef = useRef(null);
+  const messagesEndRef = useRef<HTMLDivElement>(null);
   
   // Auto-scroll to bottom when messages change
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, [messages]);
   
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (inputValue.trim() && !isLoading) {
       onSendMessage(inputValue);
