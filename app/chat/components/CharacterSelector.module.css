@@ -1,0 +1,109 @@
+.selectorContainer {
+    position: relative;
+    width: 100%;
+    margin-bottom: 1rem;
+    z-index: 10;
+  }
+  
+  .selectedCharacter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--charcoal);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .selectedCharacter:hover {
+    border-color: var(--gold);
+    box-shadow: 0 0 10px rgba(212, 175, 55, 0.2);
+  }
+  
+  .characterPreview {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .coverImageWrapper {
+    flex-shrink: 0;
+    border: 2px solid var(--gold);
+    border-radius: 0.25rem;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
+  }
+  
+  .coverImage {
+    object-fit: cover;
+    display: block;
+  }
+  
+  .characterInfo {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .characterName {
+    font-family: 'Cormorant', serif;
+    font-size: 1.5rem;
+    color: var(--gold);
+    margin: 0;
+  }
+  
+  .characterTagline, .characterBook {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin: 0;
+  }
+  
+  .selectorArrow {
+    color: var(--gold);
+    font-size: 1.2rem;
+  }
+  
+  .characterOptions {
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    left: 0;
+    right: 0;
+    background-color: var(--charcoal);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    z-index: 20;
+  }
+  
+  .characterOption {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .characterOption:hover {
+    background-color: rgba(212, 175, 55, 0.1);
+  }
+  
+  .characterOption.active {
+    background-color: rgba(212, 175, 55, 0.15);
+  }
+  
+  .characterOption:not(:last-child) {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  @media (max-width: 768px) {
+    .characterName {
+      font-size: 1.2rem;
+    }
+    
+    .characterTagline, .characterBook {
+      font-size: 0.8rem;
+    }
+  }

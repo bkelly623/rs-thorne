@@ -77,6 +77,13 @@ const Navigation = () => {
             Contact
           </Link>
           <Link 
+            href="/chat" 
+            className={`${styles.navLink} ${pathname === '/chat' ? styles.active : ''}`}
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Monster Chat
+          </Link>
+          <Link 
             href="/free-book" 
             className={`${styles.navLink} ${styles.ctaLink} ${pathname === '/free-book' ? styles.active : ''}`}
             onClick={() => setIsMenuOpen(false)}
