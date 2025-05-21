@@ -6,12 +6,18 @@ import CharacterSelector from './components/CharacterSelector';
 import ChatInterface from './components/ChatInterface';
 import styles from './page.module.css';
 
+// Define the Message type to match the one in ChatInterface.tsx
+interface Message {
+  role: 'user' | 'assistant';
+  content: string;
+}
+
 export default function ChatPage() {
   // State for selected character
   const [selectedCharacter, setSelectedCharacter] = useState(defaultCharacter);
   
-  // State for chat messages with more erotic initial greeting
-  const [messages, setMessages] = useState([
+  // State for chat messages with more erotic initial greeting - explicitly typed as Message[]
+  const [messages, setMessages] = useState<Message[]>([
     { 
       role: 'assistant', 
       content: `I am ${defaultCharacter.name}. *${defaultCharacter.tagline}* My eyes rake over your form as you approach. Have you come to surrender to me willingly, or shall I have to hunt you first?` 
@@ -39,7 +45,7 @@ export default function ChatPage() {
   // Function to handle sending message
   const handleSendMessage = async (message: string) => {
     // Add user message to chat
-    const updatedMessages = [
+    const updatedMessages: Message[] = [
       ...messages,
       { role: 'user', content: message }
     ];
