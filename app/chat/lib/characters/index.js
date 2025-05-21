@@ -14,7 +14,7 @@ const bookLinks = {
 const bookCovers = {
   "Claimed by the Kraken": "/images/Claimed By The Kraken.jpg",
   "Seduced by the Fae Lord": "/images/Seduced By The Fae Lord.jpg",
-  "Mated by the Monster King": "/images/claiming-the-monster-god.jpg" // Using closest match from your images
+  "Mated by the Monster King": "/images/Mated By The Monster King.jpg" // Using closest match from your images
 };
 
 // Enhance character objects with links and cover images
